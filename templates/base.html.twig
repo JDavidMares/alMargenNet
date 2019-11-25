@@ -9,6 +9,9 @@
           <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css')}}">
           <link rel="stylesheet" href="{{ asset('assets/css/normalize.css')}}">
         {% endblock %}
+        {% block masterhead %}
+          {% include 'elements/navBar.html.twig' %}
+        {% endblock %}
     </head>
     <body>
         {% block body %}
@@ -16,6 +19,7 @@
 
         {% block javascripts %}
           <script type="text/javascript" src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+          <script type="text/javascript" src="{{ asset('assets/js/jquery.min.js') }}"></script>
         {% endblock %}
     </body>
 </html>
