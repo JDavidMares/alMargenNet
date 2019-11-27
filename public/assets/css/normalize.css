@@ -18,9 +18,11 @@ html {
 
 /**
  * Remove the margin in all browsers.
+ * Developer fix: Add padding-top to manage the navBar
  */
 
 body {
+  padding-top: 50px;
   margin: 0;
 }
 
