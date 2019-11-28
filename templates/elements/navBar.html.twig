@@ -1,5 +1,26 @@
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top custom-max-height-1">
   <div class="container">
-    
+    {% set currentPath = path(app.request.attributes.get('_route'),app.request.attributes.get('_route_params')) %}
+    {% set url = currentPath|split('/') %}
+    {% set path = url | slice(1) %}
+
+    <div class="row">
+      <div class="col-xs-5 col-md-5 custom-display-flex">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/WPVG_icon_2016.svg/1024px-WPVG_icon_2016.svg.png" class="img-rounded img-responsive custom-padding-1 custom-img-1" >
+        <h2 class="hidden-xs">al margen.net</h2>
+      </div>
+      <div class="col-xs-7 col-md-4">
+        <div class="input-group custom-padding-1 text-center  {% if path|first == 'admin' %} hidden {% endif %}">
+          <span class="input-group-addon glyphicon glyphicon-search" id="basic-addon1"></span>
+          <input type="text" class="form-control" name="" >
+        </div>
+      </div>
+      <div class="col-md-3 hidden-sm-down hidden-xs text-center">
+        <a href="" class="btn btn-info btn-lg">
+          <span class="glyphicon glyphicon-user"></span> Login
+        </a>
+      </div>
+    </div>
+
   </div>
 </nav>

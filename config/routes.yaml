@@ -1,3 +1,11 @@
 index:
    path: /
    controller: App\Controller\MainController::welcome
+
+new:
+   path: /admin/new-publish
+   controller: App\Controller\AdminController::newPublish
+
+# content:
+#    path: /{myOtherVariable}/{myVariable}
+#    controller: App\Controller\AdminController::variableDemo

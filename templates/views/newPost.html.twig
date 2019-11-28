@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+  <link href="https://cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet">
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="https://cdn.quilljs.com/1.0.0/quill.js"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/newPublish-quill.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+
+  <div id="editor-container"></div>
+
+{% endblock %}
